@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express();
-const PORT = 6667
+const PORT = 9081
 
 const {userRouter} = require("./routes/user");
 const {courseRouter} = require("./routes/course");
