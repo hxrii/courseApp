@@ -1,25 +1,27 @@
-function userHandle(app){
+const {Router} = require("express");
 
-app.post('/user/signup',function(req,res){
+const userRouter = Router();
+
+app.post('/signup',function(req,res){
     res.json({
         message:'Hit Sign Up endpoint'
     })
 })
 
-app.post('/user/signin',function(req,res){
+app.post('/signin',function(req,res){
     res.json({
         message:'Hit Sign In endpoint'
     })
 })
 
-app.get('/user/purchases',function(req,res){
+app.get('/purchases',function(req,res){
     res.json({
         message:'Hit Purchase endpoint'
     })
 })
 
-}
+
 
 module.exports={
-    userHandle:userHandle
+    userRouter: userRouter
 }

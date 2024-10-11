@@ -3,22 +3,16 @@ const express = require('express')
 const app = express();
 const PORT = 6667
 
-const {userHandle} = require("./routes/user");
+const {userRouter} = require("./routes/user");
+const {courseRouter} = require("./routes/course");
+
+
+app.use("/user",userRouter);
+app.use("/course",courseRouter);
 
 
 
 
-app.get('/courses',function(req,res){
-    res.json({
-        message:'Hit Sign Up endpoint'
-    })
-})
-
-app.post('/course/purchase',function(req,res){
-    res.json({
-        message:'Hit Sign Up endpoint'
-    })
-})
 
 
 
